@@ -2,10 +2,10 @@ package taller3.televisores;
 
 public class TV {
     private Marca marca;
-    int canal;
+    public int canal;
     private int precio;
     private boolean estado;
-    private int volumen;
+    public int volumen;
     private Control control;
     private static int numTV;
 
@@ -20,31 +20,11 @@ public class TV {
         this.marca = marca;
     }
 
-    public int getCanal(){
-        return canal;
-    } 
-    public void setCanal(int canal){
-        if (this.estado == true){
-            if (canal >= 1 && canal <= 120){
-                this.canal = canal;
-            }  
-        }
-    }
-
     public int getPrecio(){
         return precio;
     }
     public void setPrecio(int precio){
         this.precio = precio;
-    }
-
-    public int getVolumen(){
-        return volumen;
-    }
-    public void setVolumen (int volumen){
-        if (volumen >= 0 && volumen <= 7){
-                this.volumen = volumen;
-            }  
     }
 
     public void setControl(Control control){
@@ -84,10 +64,19 @@ public class TV {
             if (canal >= 1 && canal <= 120){
                 canal--;
             }  
-        }
-        
+        }   
     }
+    public int getCanal(){
+        return canal;
+    } 
 
+    public void setCanal(int canal){
+        if (this.estado == true){
+            if (canal >= 1 && canal <= 120){
+                this.canal = canal;
+            }  
+        }
+    }
     public void volumenUp(){
         if (this.volumen >= 0 && this.volumen <= 7){
             volumen++;
@@ -97,6 +86,14 @@ public class TV {
         if (this.volumen >= 0 && this.volumen <= 7){
             volumen--;
         }
+    }
+    public void setVolumen (int volumen){
+        if (volumen >= 0 && volumen <= 7){
+            this.volumen = volumen;
+        }  
+    }
+    public int getVolumen(){
+        return volumen;
     }
 
     public void enlazar(Control control){

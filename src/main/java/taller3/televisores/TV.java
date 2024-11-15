@@ -41,6 +41,13 @@ public class TV {
         this.volumen = volumen;
     }
 
+    public void setControl(Control control){
+        this.control = control;
+    }
+    public Control getControl(){
+        return control;
+    }
+
     public static void setNumTV(int num) {
         numTV = num;
     }

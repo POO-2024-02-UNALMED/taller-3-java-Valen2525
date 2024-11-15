@@ -16,13 +16,17 @@ public class Control {
     }
 
     public void canalUp(){
-        tv.canalUp();
+        if (tv != null) {
+            tv.canalUp();
+        }
     }
     public void canalDown(){
         tv.canalDown();
     }
     public void setCanal(int canal){
-        tv.setCanal(canal);
+        if (tv != null) { 
+            tv.setCanal(canal);
+        }
     }
 
     public void volumenUp(){

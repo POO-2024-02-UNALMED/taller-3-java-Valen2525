@@ -42,11 +42,9 @@ public class TV {
         return volumen;
     }
     public void setVolumen (int volumen){
-        if (this.estado == true){
-            if (volumen >= 0 && volumen <= 7){
+        if (volumen >= 0 && volumen <= 7){
                 this.volumen = volumen;
             }  
-        }
     }
 
     public void setControl(Control control){

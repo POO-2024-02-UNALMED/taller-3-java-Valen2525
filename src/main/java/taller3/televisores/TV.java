@@ -95,6 +95,7 @@ public class TV {
 
     public void enlazar(Control control){
         this.control = control;
+        control.setTv(this);
     }
 
 }

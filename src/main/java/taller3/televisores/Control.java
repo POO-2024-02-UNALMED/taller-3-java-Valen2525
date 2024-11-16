@@ -41,7 +41,4 @@ public class Control {
     public TV getTv(){
         return tv;
     }
-
-
-
 }
